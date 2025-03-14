@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginForm from "./Formulario";
+import ListadoRobots from "./ListadoRobots";
+import DetalleRobot from "./DetalleRobot"; // Importamos el nuevo componente
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LoginForm />} />
+          <Route path="/robots" element={<ListadoRobots />} />
+          <Route path="/robots/:id" element={<DetalleRobot />} /> {/* Nueva ruta */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
