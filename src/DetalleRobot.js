@@ -23,7 +23,7 @@ function DetalleRobot({ id }) {
   return (
     <div
       className="flex flex-col items-center border-2 border-blue-500 p-4 rounded-lg max-w-sm mx-auto shadow-lg"
-      style={{ backgroundColor: "rgba(217, 217, 217, 0.5)" }} // Fondo con 50% de opacidad
+      style={{ backgroundColor: "rgba(217, 217, 217, 0.5)" }} 
     >
       <h4 className="text-xl font-bold mb-2">{robot.nombre}</h4>
       <img
