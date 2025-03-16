@@ -31,7 +31,7 @@ function Formulario() {
         setErrorMessage("");
         navigate("/robots", { state: { token: data.token } });
       } else {
-        setErrorMessage("Error de autenticación. Revise sus credenciales");
+        setErrorMessage(<FormattedMessage id="error_autenticacion" />);
       }
     } catch (error) {
       setErrorMessage("Error conectando con el backend: " + error.message);
