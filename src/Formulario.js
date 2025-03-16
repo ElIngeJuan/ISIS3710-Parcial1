@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import logo from "../src/assets/image 4.png";
+import { FormattedMessage } from "react-intl";
 
 function Formulario() {
   const [formValues, setFormValues] = useState({ email: "", password: "" });
@@ -40,10 +41,14 @@ function Formulario() {
   return (
     <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", height: "100vh", justifyContent: "center" }}>
       <img src={logo} alt="Robot Lovers Logo" style={{ width: "1143px", marginBottom: "20px", height: "311px" }} />
-      <h2 style={{ fontWeight: "bold", marginBottom: "20px" }}>Inicio de sesión</h2>
+      <h2 style={{ fontWeight: "bold", marginBottom: "20px" }}>
+        <FormattedMessage id="inicio_sesion"/>
+      </h2>
       <Form style={{ maxWidth: "400px", width: "100%" }}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label style={{ fontWeight: "bold" }}>Nombre de usuario</Form.Label>
+          <Form.Label style={{ fontWeight: "bold" }}>
+            <FormattedMessage id="nombre_usuario"/>
+            </Form.Label>
           <Form.Control
             type="email"
             placeholder=""
@@ -55,7 +60,9 @@ function Formulario() {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label style={{ fontWeight: "bold" }}>Contraseña</Form.Label>
+          <Form.Label style={{ fontWeight: "bold" }}>
+            <FormattedMessage id="contrasena" />
+          </Form.Label>
           <Form.Control
             type="password"
             placeholder=""
@@ -70,12 +77,12 @@ function Formulario() {
 
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Button style={{ backgroundColor: "#003087", border: "none", width: "48%", height: "40px" }} onClick={clickSubmit}>
-            Ingresar
+              <FormattedMessage id="ingresar" />
           </Button>
           <Button style={{ backgroundColor: "#d9534f", border: "none", width: "48%", height: "40px" }} 
             onClick={() => setFormValues({ email: "", password: "" })}
 > 
-            Cancelar
+            <FormattedMessage id="cancelar" />
             </Button>
         </div>
       </Form>

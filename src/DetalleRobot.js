@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 function DetalleRobot({ id }) {
   const [robot, setRobot] = useState(null);
@@ -18,7 +18,9 @@ function DetalleRobot({ id }) {
   }, [id]);
 
   if (error) return <p style={{ color: "red" }}>❌ {error}</p>;
-  if (!robot) return <p>Cargando...</p>;
+  if (!robot) return <p>
+    <FormattedMessage id="cargando" />
+  </p>;
 
   return (
     <div
@@ -34,13 +36,19 @@ function DetalleRobot({ id }) {
       />
       <div className="text-left">
         <p>
-          <strong>Año de Fabricación:</strong> {robot.añoFabricacion}
+          <strong>
+            <FormattedMessage id="anio_fabricacion" />
+            :</strong> {robot.añoFabricacion}
         </p>
         <p>
-          <strong>Capacidad de Procesamiento:</strong> {robot.capacidadProcesamiento} GHz
+          <strong>
+            <FormattedMessage id="capacidad_procesamiento" />
+            :</strong> {robot.capacidadProcesamiento} GHz
         </p>
         <p>
-          <strong>Humor:</strong> {robot.humor}
+          <strong>
+            <FormattedMessage id="humor" />
+            :</strong> {robot.humor}
         </p>
       </div>
     </div>

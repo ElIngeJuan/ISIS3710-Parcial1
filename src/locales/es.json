@@ -1,0 +1,19 @@
+{
+    "id": "ID",
+    "nombre": "Nombre",
+    "modelo": "Modelo",
+    "empresa_fabricante": "Empresa Fabricante",
+    "anio_fabricacion": "Año de fabricación",
+    "capacidad_procesamiento": "Capacidad de procesamiento",
+    "humor": "Humor",
+    "titulo_adopcion": "¡Adopta un Robot con Robot Lovers!",
+    "inicio_sesion": "Inicio de sesión",
+    "nombre_usuario": "Nombre de usuario",
+    "contrasena": "Contraseña",
+    "ingresar": "Ingresar",
+    "cancelar": "Cancelar",
+    "error_autenticacion": "Error de autenticación. Revise sus credenciales.",
+    "error_conexion": "Error conectando con el backend:",
+    "contacto": "Contáctanos: +57 3102102523 - info@robot-lovers.com - @robot-lovers",
+    "cargando": "Cargando..."
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../src/assets/image 4.png";
 import DetalleRobot from "./DetalleRobot";
+import { FormattedMessage } from "react-intl";
 
 function ListadoRobots() {
   const [robots, setRobots] = useState([]);
@@ -23,17 +24,27 @@ function ListadoRobots() {
   return (
     <div className="container mt-4 text-center">
       <img src={logo} alt="Robot Lovers" className="img-fluid mb-3" style={{ maxWidth: "600px" }} />
-      <h1 className="fw-bold">Adopta un Robot con Robot Lovers!</h1>
+      <h1 className="fw-bold">
+        <FormattedMessage id="titulo_adopcion" />
+      </h1>
       <div className="row">
         {/* Columna de la tabla de robots */}
         <div className={`col-md-${robotSeleccionado ? "8" : "12"} table-responsive`}>
           <table className="table table-bordered mt-3 text-center">
             <thead className="table-dark">
               <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Modelo</th>
-                <th>Empresa Fabricante</th>
+                <th>
+                  <FormattedMessage id="id" />
+                </th>
+                <th>
+                  <FormattedMessage id="nombre" />
+                </th>
+                <th>
+                  <FormattedMessage id="modelo" />
+                </th>
+                <th>
+                  <FormattedMessage id="empresa_fabricante" />
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -57,7 +68,7 @@ function ListadoRobots() {
       </div>
 
       <footer className="mt-4 text-muted">
-        Contact us: +57 3102102523 - info@robot-lovers.com - @robot-lovers
+      <FormattedMessage id="contacto" />
       </footer>
     </div>
   );
